@@ -10,13 +10,13 @@ Show the formula in the report or presentation:
 `HMAC(K, text) = H((K0 ⊕ opad) || H((K0 ⊕ ipad) || text))`
 
 ## 2:00–4:00 — Generate and verify
-1. Open the Generate HMAC tab.
+1. Open the Message Authentication tab.
 2. Enter a demonstration-only key.
 3. Enter `Transfer 100 USD to Bob`.
 4. Click Generate HMAC.
-5. Copy the displayed tag.
-6. Open Verify HMAC and enter the same key, message, and tag.
-7. Show the success result.
+5. Click **Use these values in Verify →** below the displayed tag.
+6. Confirm that the key, message, tag, and algorithm appear in the Verify HMAC panel.
+7. Click Verify message and show the success result.
 
 Say: "The receiver recomputes the tag. The result matches the supplied tag, so verification passes."
 

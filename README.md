@@ -62,11 +62,11 @@ The tests cover successful verification, message tampering, an incorrect key, a 
 
 ## 6. Suggested demo
 
-1. Open **Generate HMAC**.
+1. Open **Message Authentication**.
 2. Enter a secret key such as `demo-key-please-change-123456`.
 3. Enter `Transfer 100 USD to Bob`.
-4. Generate and copy the tag.
-5. Open **Verify HMAC** and enter the same key, message, and tag. Verification should pass.
+4. Generate the tag, then click **Use these values in Verify →**.
+5. Click **Verify message** in the panel on the right. Verification should pass.
 6. Change the message to `Transfer 900 USD to Bob` while keeping the old tag. Verification should fail.
 7. Restore the message but enter a different key. Verification should fail.
 8. Optionally upload a file and generate its HMAC.

@@ -57,7 +57,7 @@ HMAC supports message integrity and authentication among parties that share a se
 
 The prototype has three layers:
 
-1. **User interface:** Streamlit tabs for generation, verification, file authentication, and explanatory information.
+1. **User interface:** A two-column Streamlit workspace for message generation and verification, plus tabs for file authentication and explanatory information.
 2. **Cryptographic operations:** Python `hmac` and `hashlib` standard-library modules.
 3. **Key generation:** Python `secrets` module for unpredictable demonstration keys.
 
@@ -82,7 +82,7 @@ The prototype has three layers:
 
 ## 5. Implementation
 
-The application is implemented in `app.py`. The Generate HMAC tab takes a message and secret key, then displays the tag. The Verify HMAC tab recomputes the expected tag and compares it with the supplied value. The File Authentication tab computes a tag over the exact uploaded file bytes.
+The application is implemented in `app.py`. The Message Authentication tab places Generate HMAC and Verify HMAC side by side. After generating a tag, the sender values can be copied into the verification panel with one button; the receiver panel then recomputes the expected tag and compares it with the supplied value. The File Authentication tab computes a tag over the exact uploaded file bytes.
 
 The application rejects an empty key. It displays a warning when a manually entered key is shorter than 16 bytes. This is a basic educational safeguard, not a complete key-management policy. In a production application, key generation, storage, rotation, access control, and distribution require additional design.
 
